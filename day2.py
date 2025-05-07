@@ -1,8 +1,9 @@
+
+
 print("Hello, world!")
 
 
- #2. Variables and Data Types
-name = "Alice"      # string
+#2. Variables and Data Types
 height = 5.7        # float
 is_student = True   # boolean
 is_active = True       # bool
@@ -29,7 +30,7 @@ print(a % b)   # 1 (remainder)
 
 
 # Comparison
-a == b  # False
+b == a  # False
 a > b   # True
 a != b  # True
 
