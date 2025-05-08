@@ -86,3 +86,99 @@ def fun(**kwargs):
 fun(name="Alice", age=30, city="New York")
 
 
+#2. Lists
+#len(), min(), max(), sum(), sorted()
+
+fruits = ["apple", "banana", "cherry", "orange"]
+fruits.append("orange")
+print(fruits[1:3])
+
+#3. Dictionaries
+person = {"name": "Asha", "age": 30}
+person["city"] = "Bangalore"
+print(person["name"])
+
+# 4. Sets
+a = {1, 2, 3}
+b = {2, 3, 4}
+print(a.union(b))        # {1, 2, 3, 4}
+print(a.intersection(b)) # {2, 3}
+
+
+
+# ✅ 1. Functions
+# 🔹 Exercise 1: Add Two Numbers
+def add_numbers(a, b):
+    return a + b
+
+print(add_numbers(5, 7))  # Output: 12
+
+# 🔹 Exercise 2: Factorial of a Number
+def factorial(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+
+print(factorial(5))  # Output: 120
+
+
+# ✅ 2. Lists
+# 🔹 Exercise 1: Second Largest Number in a List
+
+def second_largest(nums):
+    unique_nums = list(set(nums))  # remove duplicates
+    unique_nums.sort()
+    return unique_nums[-2]
+
+print(second_largest([10, 20, 4, 45, 99, 45]))  # Output: 45
+
+
+
+# 🔹 Exercise 2: Celsius to Fahrenheit
+
+celsius = [0, 20, 37, 100]
+fahrenheit = [((9/5)*temp + 32) for temp in celsius]
+print(fahrenheit)  # Output: [32.0, 68.0, 98.6, 212.0]
+
+
+
+# ✅ 3. Dictionaries
+# 🔹 Exercise 1: Student Marks Average
+students = {
+    "Asha": 85,
+    "Ravi": 92,
+    "Maya": 78
+}
+
+average = sum(students.values()) / len(students)
+print(f"Average Marks: {average}")  # Output: 85.0
+
+
+# 🔹 Exercise 2: Character Frequency Counter
+
+def char_frequency(text):
+    freq = {}
+    for char in text:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    return freq
+
+print(char_frequency("hello world"))
+# Output: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
+
+
+# ✅ 4. Sets
+# 🔹 Exercise 1: Remove Duplicates from a List
+
+nums = [1, 2, 2, 3, 4, 4, 5]
+unique_nums = list(set(nums))
+print(unique_nums)  # Output: [1, 2, 3, 4, 5]
+
+# 🔹 Exercise 2: Common Elements in Two Lists
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+common = list(set(list1) & set(list2))
+print(common)  # Output: [3, 4]
