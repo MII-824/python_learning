@@ -45,3 +45,4 @@ def char_freq(text):
     return freq
 print(char_freq("Hello world"))
 
+
