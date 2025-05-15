@@ -35,10 +35,13 @@ class ToDoApp:
     def add_task(self):
         description = input("Enter task: ")
         deadline = input("Enter deadline (or press Enter to skip): ")
-        task = Task(description, deadline if deadline else None)
-        self.tasks.append(task)
-        self.save_tasks()
-        print("Task added!")
+        if  description:
+            task = Task(description, deadline if deadline else None)
+            self.tasks.append(task)
+            self.save_tasks()
+            print("Task added!")
+        else:
+            print("Need to add task name.")
 
     def view_tasks(self):
         if not self.tasks:
